@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ObstaculoMov : MonoBehaviour {
 
     Vector3 inicio;
-    public int posicionY, velocidad, tiempo;
+    public int posicionF_Y;
+    public float velocidad,posicionI_Y;
 
-	void Start () {
+
+    void Start () {
 
         inicio = transform.position;
 
@@ -14,8 +15,8 @@ public class ObstaculoMov : MonoBehaviour {
 	
 	void Update () {
 
-        transform.position = inicio;
-        inicio.y = Mathf.PingPong(velocidad * Time.time, tiempo) + posicionY;
+        this.gameObject.transform.position=inicio;
+        inicio.y = Mathf.PingPong(velocidad * Time.time, posicionI_Y) + posicionF_Y;
 	
 	}
 }
