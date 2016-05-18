@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Player : MonoBehaviour {
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour {
 
     public void Death()
     {
-        Application.LoadLevel("Test Level");
+        SceneManager.LoadScene("Test Level");
     }
 
     void OnTriggerEnter(Collider other)
