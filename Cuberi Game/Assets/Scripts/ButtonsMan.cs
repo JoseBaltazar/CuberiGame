@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class ButtonsMan : MonoBehaviour {
 
@@ -7,8 +8,13 @@ public class ButtonsMan : MonoBehaviour {
     public GameObject OptionsBot;
     public GameObject RightBut, LeftBut;
     public GameObject JumpBut1,JumpBut2;
+    public GameObject OptionsBut;
+
+    public bool isPaused;
 
 	void Start () {
+
+        isPaused = false;
 
         RightBut.SetActive(false);
         LeftBut.SetActive(false);
