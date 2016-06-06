@@ -7,7 +7,8 @@ public class Player : MonoBehaviour {
     Vector3 inicio;
 
     public bool right=false;
-    public bool left = false;
+    public bool left=false;
+    public bool stop;
 
     public float speed;
     public int numJump, jumpForce;
@@ -17,15 +18,24 @@ public class Player : MonoBehaviour {
 	void Start () {
 
         inicio = transform.position;
+        stop = true;
 	
 	}
 	
 	void Update () {
 
-        MovRun();
+        if (stop==false)
+        {
+            MovRun();
+        }
         Jump();
 
 	}
+
+    public void GoRun()
+    {
+        stop = false;
+    }
 
     void MovRun() {
         gameObject.transform.Translate(1*Time.deltaTime*speed, 0, 0);
