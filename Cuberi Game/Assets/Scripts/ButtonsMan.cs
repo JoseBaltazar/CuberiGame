@@ -19,14 +19,14 @@ public class ButtonsMan : MonoBehaviour {
     public GameObject briLowBut;
 
     public bool inOptions;
-
+    public bool inPlay;
     public bool isPaused;
 
 	void Start () {
 
         inOptions = false;
 
-        isPaused = false;
+        isPaused = true;
 
         PauseBut.SetActive(false);
 
@@ -47,17 +47,56 @@ public class ButtonsMan : MonoBehaviour {
 
         CheckPause();
         CheckOptions();
+        CheckPlay();
 	}
 
     public void CheckPause()
     {
-        if (isPaused==true)
+        if (isPaused == true)
         {
+            StartBot.SetActive(true);
+            RightBut.SetActive(false);
+            LeftBut.SetActive(false);
+
+            JumpBut1.SetActive(false);
+            JumpBut2.SetActive(false);
+        }
+        if (isPaused == false)
+        {
+            StartBot.SetActive(false);
+            RightBut.SetActive(false);
+            LeftBut.SetActive(false);
+
+            JumpBut1.SetActive(false);
+            JumpBut2.SetActive(false);
+        }
+
+    }
+
+    public void CheckPlay()
+    {
+        if (inPlay==true && isPaused==false)
+        {
+            StartBot.SetActive(false);
+            PauseBut.SetActive(true);
+
             RightBut.SetActive(true);
             LeftBut.SetActive(true);
 
             JumpBut1.SetActive(true);
             JumpBut2.SetActive(true);
+        }
+
+        if (inPlay == false && isPaused == true)
+        {
+            StartBot.SetActive(true);
+            PauseBut.SetActive(false);
+
+            RightBut.SetActive(false);
+            LeftBut.SetActive(false);
+
+            JumpBut1.SetActive(false);
+            JumpBut2.SetActive(false);
         }
     }
 
@@ -77,6 +116,11 @@ public class ButtonsMan : MonoBehaviour {
             briUpBut.SetActive(false);
             briLowBut.SetActive(false);
         }
+    }
+
+    public void Play()
+    {
+        StartBot.SetActive(false);
     }
 
     public void Pause()
@@ -102,11 +146,15 @@ public class ButtonsMan : MonoBehaviour {
 
     public void GoPause()
     {
+        GameObject.Find("Player").GetComponent<Player>().stop = true;
         isPaused = true;
+        inPlay = false;
     }
 
     public void GoPlay()
     {
+        isPaused = false;
+        inPlay = true;
         GameObject.Find("Player").GetComponent<Player>().stop = false;
     }
 
