@@ -72,7 +72,10 @@
     <Compile Include="Assets\Scripts\ButtonsMan.cs" />
     <Compile Include="Assets\Scripts\CameraMov.cs" />
     <Compile Include="Assets\Scripts\CoinsUI.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\ItemManager.cs" />
+=======
+>>>>>>> origin/master
     <Compile Include="Assets\Scripts\MenuCTRL.cs" />
     <Compile Include="Assets\Scripts\Obstaculo.cs" />
     <Compile Include="Assets\Scripts\ObstaculoMov.cs" />
