@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
     public bool stop;
 
     public float speed;
-    public int numJump, jumpForce;
+    public int numJump, jumpForce, coins;
 
     public int contador;
 
