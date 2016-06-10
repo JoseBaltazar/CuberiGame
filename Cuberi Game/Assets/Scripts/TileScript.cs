@@ -25,7 +25,7 @@ public class TileScript : MonoBehaviour {
         }
     
     }
-
+    //uso de corrutinas para desactivar kinematic esperando un tiempo en segundos
     IEnumerator FallDown()
     {
         yield return new WaitForSeconds(fallDelay);

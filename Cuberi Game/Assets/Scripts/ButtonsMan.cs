@@ -102,13 +102,8 @@ public class ButtonsMan : MonoBehaviour {
 
     public void CheckOptions()
     {
-        if (inOptions==true)
-        {
-            Options();
-            OptionsBot.SetActive(false);
-        }
 
-        if (inOptions==false)
+        if (inPlay==true)
         {
             volUpBut.SetActive(false);
             volLowBut.SetActive(false);
@@ -118,30 +113,19 @@ public class ButtonsMan : MonoBehaviour {
         }
     }
 
-    public void Play()
-    {
-        StartBot.SetActive(false);
-    }
 
-    public void Pause()
+    public void GoOptions()
     {
         GameObject.Find("Player").GetComponent<Player>().stop = true;
-    }
-
-    public void Options()
-    {
-        GameObject.Find("Player").GetComponent<Player>().stop = true;
+        inOptions = true;
+        inPlay = false;
+        isPaused = true;
 
         volUpBut.SetActive(true);
         volLowBut.SetActive(true);
 
         briUpBut.SetActive(true);
         briLowBut.SetActive(true);
-    }
-
-    public void GoOptions()
-    {
-        inOptions = true;
     }
 
     public void GoPause()
@@ -153,8 +137,10 @@ public class ButtonsMan : MonoBehaviour {
 
     public void GoPlay()
     {
+        StartBot.SetActive(false);
         isPaused = false;
         inPlay = true;
+        inOptions = false;
         GameObject.Find("Player").GetComponent<Player>().stop = false;
     }
 
