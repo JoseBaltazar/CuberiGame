@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class CoinsUI : MonoBehaviour {
-
+    /*
     public Text coinsText;
     public int coinsNum;
 
@@ -17,4 +17,6 @@ public class CoinsUI : MonoBehaviour {
         coinsNum = GameObject.Find("Player").GetComponent<Player>().coins;
         coinsText.text = "" + coinsNum;
     }
-}
+
+*/
+  }
