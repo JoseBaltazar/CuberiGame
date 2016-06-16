@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
         gameObject.transform.Translate(1*Time.deltaTime*speed, 0, 0);
     }
 
-    void Jump()
+    public void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -76,8 +76,6 @@ public class Player : MonoBehaviour {
                 upTime = 20;
             }
         }
-
-
     }
 
     public void MoveRight()
