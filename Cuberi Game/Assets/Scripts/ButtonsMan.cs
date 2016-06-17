@@ -19,6 +19,7 @@ public class ButtonsMan : MonoBehaviour {
     public bool inOptions;
     public bool inPlay;
     public bool isPaused;
+    public bool activeJump;
 
 	void Start () {
 
@@ -46,7 +47,23 @@ public class ButtonsMan : MonoBehaviour {
         CheckPause();
         CheckOptions();
         CheckPlay();
+        CheckTutorial();
+
 	}
+
+    public void CheckTutorial()
+    {
+        if (GameObject.Find("Player").GetComponent<Player>().inTutorial==true)
+        {
+            StartBot.SetActive(false);
+            RightBut.SetActive(false);
+            LeftBut.SetActive(false);
+
+            JumpBut1.SetActive(false);
+            JumpBut2.SetActive(false);
+        }
+
+    }
 
     public void CheckPause()
     {

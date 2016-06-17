@@ -6,22 +6,23 @@ public class Player : MonoBehaviour {
 
     Vector3 inicio;
 
-    public bool canJump = false;
     public int downTime;
     public int upTime;
+    public int contador;
+
+    public float speed;
 
     public bool right=false;
     public bool left=false;
     public bool stop;
-    public float speed;
-    public int contador;
-    
+    public bool canJump = false;
+    public bool inTutorial;
 
 	void Start () {
 
         inicio = transform.position;
         stop = true;
-	
+
 	}
 	
 	void Update () {
@@ -30,10 +31,7 @@ public class Player : MonoBehaviour {
         {
             MovRun();
             Jump();
-
         }
-     
-      
 
     }
 
@@ -41,9 +39,6 @@ public class Player : MonoBehaviour {
     {
         stop = false;
     }
-
-
-
 
     void MovRun() {
         gameObject.transform.Translate(1*Time.deltaTime*speed, 0, 0);
@@ -80,7 +75,7 @@ public class Player : MonoBehaviour {
 
     public void MoveRight()
     {
-        if (contador<1)
+        if (contador<1 && inTutorial==false)
         {
             contador++;
             gameObject.transform.Translate(0, 0, -2);
@@ -88,7 +83,7 @@ public class Player : MonoBehaviour {
     }
     public void MoveLeft()
     {
-        if (contador>-1)
+        if (contador>-1 && inTutorial == false)
         {
             contador--;
             gameObject.transform.Translate(0, 0, 2);
