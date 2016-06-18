@@ -16,7 +16,7 @@ public class ObstaculoMov : MonoBehaviour {
 	void Update () {
 
         this.gameObject.transform.position=inicio;
-        inicio.y = Mathf.PingPong(velocidad * Time.time, posicionF_Y) + posicionI_Y;
+        inicio.x = Mathf.PingPong(velocidad * Time.time, posicionF_Y) + posicionI_Y;
 	
 	}
 }
