@@ -12,25 +12,33 @@ public class Player : MonoBehaviour {
 
     public float speed;
 
-    public bool right=false;
-    public bool left=false;
+    public bool right = false;
+    public bool left = false;
     public bool stop;
     public bool canJump = false;
     public bool inTutorial;
 
-	void Start () {
+
+    void Start()
+    {
 
         inicio = transform.position;
         stop = true;
+        upTime = 20;
 
-	}
-	
-	void Update () {
+    }
 
-        if (stop==false)
+    void Update()
+    {
+
+        if (stop == false)
         {
             MovRun();
-            Jump();
+
+        }
+        if (canJump == true)
+        {
+            jumpCode();
         }
 
     }
@@ -40,18 +48,16 @@ public class Player : MonoBehaviour {
         stop = false;
     }
 
-    void MovRun() {
-        gameObject.transform.Translate(1*Time.deltaTime*speed, 0, 0);
+    void MovRun()
+    {
+        gameObject.transform.Translate(1 * Time.deltaTime * speed, 0, 0);
     }
 
-    public void Jump()
+    public void jumpCode()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            canJump = true;
-        }
 
-        if (canJump == true && upTime > 0)
+
+        if (upTime > 0)
         {
             transform.Translate(0, 10 * (Time.deltaTime), 0);
             upTime--;
@@ -71,11 +77,16 @@ public class Player : MonoBehaviour {
                 upTime = 20;
             }
         }
+
+    }
+    public void Jump()
+    {
+        canJump = true;
     }
 
     public void MoveRight()
     {
-        if (contador<1 && inTutorial==false)
+        if (contador < 1 && inTutorial == false)
         {
             contador++;
             gameObject.transform.Translate(0, 0, -2);
@@ -83,7 +94,7 @@ public class Player : MonoBehaviour {
     }
     public void MoveLeft()
     {
-        if (contador>-1 && inTutorial == false)
+        if (contador > -1 && inTutorial == false)
         {
             contador--;
             gameObject.transform.Translate(0, 0, 2);
@@ -97,7 +108,7 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag=="Obstacle1")
+        if (other.transform.tag == "Obstacle1")
         {
             Death();
         }
