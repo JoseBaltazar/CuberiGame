@@ -379,7 +379,7 @@ Prefab:
       value: Obstacle 2 (63)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 11447552, guid: 1295e8d20fdd1c747ae450de04b3f663, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1295e8d20fdd1c747ae450de04b3f663, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &17727364
