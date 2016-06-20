@@ -16,6 +16,7 @@ TagManager:
   - Coinx20
   - InTuto
   - JumpOn
+  - DirectionsOn
   layers:
   - Default
   - TransparentFX

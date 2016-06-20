@@ -20,6 +20,7 @@ public class ButtonsMan : MonoBehaviour {
     public bool inPlay;
     public bool isPaused;
     public bool activeJump;
+    public bool activeDirections;
 
 	void Start () {
 
@@ -66,6 +67,13 @@ public class ButtonsMan : MonoBehaviour {
         {
             JumpBut1.SetActive(true);
             JumpBut2.SetActive(true);
+        }
+
+        if (activeDirections == true)
+        {
+            RightBut.SetActive(true);
+            LeftBut.SetActive(true);
+            GameObject.Find("Player").GetComponent<Player>().inTutorial =false;
         }
     }
 

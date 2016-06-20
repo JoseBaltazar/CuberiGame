@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2331264}
   - 65: {fileID: 6598766}
   - 54: {fileID: 5418046}
+  - 114: {fileID: 11461536}
   m_Layer: 0
   m_Name: Tile3
   m_TagString: Untagged
@@ -86,11 +87,22 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108346}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7.437653, y: 1.0013208, z: 3.8563604}
   m_Center: {x: -0.000009983095, y: 2.509252, z: 1.9281908}
+--- !u!114 &11461536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229c664af6932af43999396b17af17ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
