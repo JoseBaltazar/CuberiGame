@@ -11,6 +11,11 @@ public class ActionObjects : MonoBehaviour {
             {
                 GameObject.Find("Player").GetComponent<Player>().inTutorial = true;
             }
+
+            if (this.gameObject.transform.CompareTag("JumpOn"))
+            {
+                GameObject.Find("BottonsManager").GetComponent<ButtonsMan>().activeJump = true;
+            }
         }
     }
 }

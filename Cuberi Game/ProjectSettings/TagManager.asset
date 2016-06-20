@@ -14,6 +14,8 @@ TagManager:
   - Coinx10
   - Coinx5
   - Coinx20
+  - InTuto
+  - JumpOn
   layers:
   - Default
   - TransparentFX
