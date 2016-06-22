@@ -16,10 +16,12 @@ public class Rots : MonoBehaviour {
         if (other.transform.tag == "Rot0")
         {
             gameObject.transform.Rotate(0, -90, 0);
+            Destroy(other.gameObject);
         }
         if (other.transform.tag == "Rot1")
         {
             gameObject.transform.Rotate(0, 90, 0);
+            Destroy(other.gameObject);
         }
         if (other.transform.tag == "Rot2")
         {
