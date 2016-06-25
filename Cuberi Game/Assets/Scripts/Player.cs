@@ -66,7 +66,7 @@ public class Player : MonoBehaviour {
     {
         if (upTime > 0)
         {
-            transform.Translate(0, 10 * (Time.deltaTime), 0);
+            transform.Translate(0, 10 * Time.deltaTime, 0);
             upTime--;
             if (upTime == 0)
             {
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour {
         }
         if (upTime == 0 && downTime < 20)
         {
-            transform.Translate(0, -10 * (Time.deltaTime), 0);
+            transform.Translate(0, -10 * Time.deltaTime, 0);
             downTime++;
             if (downTime == 20)
             {

@@ -7,8 +7,6 @@ public class ItemManager : MonoBehaviour {
     public int cx5Value, cx10Value, cx20Value;
     public float c5sRot, c10sRot, c20sRot;
 
-    public int temp1;
-
 	void Start () {
 
         Coinx5 = GameObject.FindGameObjectsWithTag("Coinx5");

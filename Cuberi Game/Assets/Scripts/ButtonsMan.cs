@@ -6,7 +6,7 @@ public class ButtonsMan : MonoBehaviour {
     public GameObject OptionsBot;
 
     public GameObject RightBut, LeftBut;
-    public GameObject JumpBut1,JumpBut2;
+    public GameObject JumpBut1;
 
     public GameObject PauseBut;
 
@@ -34,7 +34,6 @@ public class ButtonsMan : MonoBehaviour {
         LeftBut.SetActive(false);
 
         JumpBut1.SetActive(false);
-        JumpBut2.SetActive(false);
 
         volUpBut.SetActive(false);
         volLowBut.SetActive(false);
@@ -60,13 +59,12 @@ public class ButtonsMan : MonoBehaviour {
             LeftBut.SetActive(false);
 
             JumpBut1.SetActive(false);
-            JumpBut2.SetActive(false);
+          
         }
 
         if (activeJump==true)
         {
             JumpBut1.SetActive(true);
-            JumpBut2.SetActive(true);
         }
 
         if (activeDirections == true)
@@ -86,7 +84,7 @@ public class ButtonsMan : MonoBehaviour {
             LeftBut.SetActive(false);
 
             JumpBut1.SetActive(false);
-            JumpBut2.SetActive(false);
+            
         }
         if (isPaused == false)
         {
@@ -95,7 +93,7 @@ public class ButtonsMan : MonoBehaviour {
             LeftBut.SetActive(false);
 
             JumpBut1.SetActive(false);
-            JumpBut2.SetActive(false);
+            
         }
 
     }
@@ -111,7 +109,6 @@ public class ButtonsMan : MonoBehaviour {
             LeftBut.SetActive(true);
 
             JumpBut1.SetActive(true);
-            JumpBut2.SetActive(true);
         }
 
         if (inPlay == false && isPaused == true)
@@ -123,7 +120,6 @@ public class ButtonsMan : MonoBehaviour {
             LeftBut.SetActive(false);
 
             JumpBut1.SetActive(false);
-            JumpBut2.SetActive(false);
         }
     }
 
