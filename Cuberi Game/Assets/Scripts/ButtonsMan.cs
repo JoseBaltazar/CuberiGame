@@ -16,11 +16,14 @@ public class ButtonsMan : MonoBehaviour {
     public GameObject briUpBut;
     public GameObject briLowBut;
 
+    public GameObject GoNextLevelBut;
+
     public bool inOptions;
     public bool inPlay;
     public bool isPaused;
     public bool activeJump;
     public bool activeDirections;
+    public bool GoNextLevel;
 
 	void Start () {
 
@@ -48,8 +51,32 @@ public class ButtonsMan : MonoBehaviour {
         CheckOptions();
         CheckPlay();
         CheckTutorial();
+        //CheckGoNextLevel();
 
-	}
+	} 
+
+    public void CheckGoNextLevel()
+    {
+        if(GameObject.Find("Player").GetComponent<Player>().endLevel==true)
+        {
+            GoNextLevelBut.SetActive(true);
+
+            RightBut.SetActive(false);
+            LeftBut.SetActive(false);
+            JumpBut1.SetActive(false);
+
+        }
+
+        if(GameObject.Find("Player").GetComponent<Player>().endLevel==false)
+        {
+            
+            GoNextLevelBut.SetActive(false);
+        }
+
+
+    }
+
+
 
     public void CheckTutorial()
     {
@@ -165,6 +192,11 @@ public class ButtonsMan : MonoBehaviour {
         inPlay = true;
         inOptions = false;
         GameObject.Find("Player").GetComponent<Player>().stop = false;
+    }
+
+    public void GoNextLevel()
+    {
+        GameObject.Find("LevelManager").GetComponent<LevelManager>().l1Active=true;
     }
 
 

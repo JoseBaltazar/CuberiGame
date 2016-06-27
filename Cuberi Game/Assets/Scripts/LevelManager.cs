@@ -10,10 +10,6 @@ public class LevelManager : MonoBehaviour {
 
 	void Start () {
 
-		l1Active=false;
-		l2Active=false;
-
-
 		level1= GameObject.FindGameObjectWithTag("Level1");
 		level2= GameObject.FindGameObjectWithTag("Level2");
 
