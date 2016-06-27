@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\CoinsUI.cs" />
     <Compile Include="Assets\Scripts\GenericPhysincs.cs" />
     <Compile Include="Assets\Scripts\ItemManager.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\MenuCTRL.cs" />
     <Compile Include="Assets\Scripts\Obstaculo.cs" />
     <Compile Include="Assets\Scripts\ObstaculoMov.cs" />
