@@ -20,6 +20,11 @@ public class ActionObjects : MonoBehaviour {
             {
                 GameObject.Find("BottonsManager").GetComponent<ButtonsMan>().activeDirections = true;
             }
+
+            if (this.gameObject.transform.CompareTag("EndLevel"))
+            {
+                GameObject.Find("Player").GetComponent<Player>().endLevel = true;
+            }
         }
     }
 }

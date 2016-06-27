@@ -19,12 +19,14 @@ public class Player : MonoBehaviour {
     public bool stop; /*Controla si el objeto puede moverse o no*/
     public bool canJump = false; /*Controla si el metodo JumpCode() se ejecuta o no*/
     public bool inTutorial; /*Define las acciones que puede hacer el objeto como desplazamiento o salto*/
+    public bool endLevel;
 
 
     void Start()
     {
         /*Se inicializan las variables para impedir el desplazamiento del objeto desde el inicio*/
         stop = true;
+        endLevel=false;
 
         /*Igualamos la variable inicio a la posicion acutal del objeto*/
         inicio = transform.position;
@@ -37,12 +39,12 @@ public class Player : MonoBehaviour {
     {
         /*Comprobamos los booleanos para realizar las acciones de movimieno o salto*/
 
-        if (stop == false)
+        if (stop == false && endLevel == false)
         {
             MovRun();
 
         }
-        if (canJump == true)
+        if (canJump == true && endLevel == false)
         {
             jumpCode();
         }

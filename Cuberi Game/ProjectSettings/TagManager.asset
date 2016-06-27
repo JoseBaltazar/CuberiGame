@@ -17,6 +17,9 @@ TagManager:
   - InTuto
   - JumpOn
   - DirectionsOn
+  - EndLevel
+  - Level1
+  - Level2
   layers:
   - Default
   - TransparentFX
