@@ -193,11 +193,11 @@ public class ButtonsMan : MonoBehaviour {
         inOptions = false;
         GameObject.Find("Player").GetComponent<Player>().stop = false;
     }
-
+    /*
     public void GoNextLevel()
     {
         GameObject.Find("LevelManager").GetComponent<LevelManager>().l1Active=true;
     }
-
+    */
 
 }
