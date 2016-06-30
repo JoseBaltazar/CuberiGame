@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class ButtonsMan : MonoBehaviour {
 
@@ -43,6 +44,8 @@ public class ButtonsMan : MonoBehaviour {
 
         briUpBut.SetActive(false);
         briLowBut.SetActive(false);
+
+        GoNextLevelBut.SetActive(false);
     }
 	
 	void Update () {
@@ -51,31 +54,31 @@ public class ButtonsMan : MonoBehaviour {
         CheckOptions();
         CheckPlay();
         CheckTutorial();
-        //CheckGoNextLevel();
+        CheckEndLevel();
+	}
 
-	} 
-
-    public void CheckGoNextLevel()
+    public void CheckEndLevel()
     {
-        if(GameObject.Find("Player").GetComponent<Player>().endLevel==true)
+        if (GameObject.Find("Player").GetComponent<Player>().hasEnd == true)
         {
-            GoNextLevelBut.SetActive(true);
-
             RightBut.SetActive(false);
             LeftBut.SetActive(false);
+
             JumpBut1.SetActive(false);
 
+            StartBot.SetActive(false);
+
+            PauseBut.SetActive(false);
+
+            GoNextLevelBut.SetActive(true);
         }
 
-        if(GameObject.Find("Player").GetComponent<Player>().endLevel==false)
+        if (GameObject.Find("Player").GetComponent<Player>().hasEnd == false)
         {
-            
             GoNextLevelBut.SetActive(false);
         }
 
-
     }
-
 
 
     public void CheckTutorial()
@@ -193,11 +196,16 @@ public class ButtonsMan : MonoBehaviour {
         inOptions = false;
         GameObject.Find("Player").GetComponent<Player>().stop = false;
     }
-    /*
-    public void GoNextLevel()
-    {
-        GameObject.Find("LevelManager").GetComponent<LevelManager>().l1Active=true;
-    }
-    */
 
+    public void GoLevel()
+    {
+        StartCoroutine(Load());
+    }
+
+    IEnumerator Load()
+    {
+        GameObject.Find("Player").GetComponent<Player>().hasEnd = false;
+        yield return new WaitForSeconds(1);
+        GameObject.Find("LevelManager").GetComponent<LevelManager>().l1Active = true;
+    }
 }

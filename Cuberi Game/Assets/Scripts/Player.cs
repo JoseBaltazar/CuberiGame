@@ -9,7 +9,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-    Vector3 inicio; /*Obtiene la posicion donde se encuentra actualmente el objeto*/
+    //Vector3 inicio; /*Obtiene la posicion donde se encuentra actualmente el objeto*/
 
     public int downTime; /*Define cuanto tiempo demora en bajar el objeto*/
     public int upTime; /*Define cuanto tiempo demora en subir*/
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
     public bool stop; /*Controla si el objeto puede moverse o no*/
     public bool canJump = false; /*Controla si el metodo JumpCode() se ejecuta o no*/
     public bool inTutorial; /*Define las acciones que puede hacer el objeto como desplazamiento o salto*/
-    public bool endLevel;
+    public bool hasEnd;
     public Animator timmy;
 
 
@@ -29,10 +29,10 @@ public class Player : MonoBehaviour {
         timmy = GameObject.FindGameObjectWithTag("Timmy").GetComponent<Animator>();
         /*Se inicializan las variables para impedir el desplazamiento del objeto desde el inicio*/
         stop = true;
-        endLevel = false;
+        hasEnd = false;
 
         /*Igualamos la variable inicio a la posicion acutal del objeto*/
-        inicio = transform.position;
+        //inicio = transform.position;
 
         upTime = 20;
 
@@ -42,15 +42,15 @@ public class Player : MonoBehaviour {
     {
         /*Comprobamos los booleanos para realizar las acciones de movimieno o salto*/
 
-        if (stop == false && endLevel == false)
+        if (stop == false)
         {
-
-            MovRun();
-
+            if (hasEnd==false)
+            {
+                MovRun();
+            }
         }
-        if (canJump == true && endLevel == false)
+        if (canJump == true)
         {
-
             jumpCode();
         }
 
@@ -126,8 +126,7 @@ public class Player : MonoBehaviour {
     {
        
         timmy.Play("Jump", -1, 0f);
-    
-}
+    }
 
     /*Recarga de la escena al morir*/
 

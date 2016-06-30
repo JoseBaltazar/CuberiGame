@@ -4,7 +4,7 @@ public class ActionObjects : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag=="Player")
+        if (other.transform.tag=="Timmy")
         {
             if (this.gameObject.transform.CompareTag("InTuto"))
             {
@@ -23,7 +23,7 @@ public class ActionObjects : MonoBehaviour {
 
             if (this.gameObject.transform.CompareTag("EndLevel"))
             {
-                GameObject.Find("Player").GetComponent<Player>().endLevel = true;
+                GameObject.Find("Player").GetComponent<Player>().hasEnd = true;
             }
         }
     }
