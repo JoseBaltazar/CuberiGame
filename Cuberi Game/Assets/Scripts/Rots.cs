@@ -3,14 +3,6 @@ using System.Collections;
 
 public class Rots : MonoBehaviour {
 
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
-
     void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Rot0")
