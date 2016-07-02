@@ -21,12 +21,13 @@ public class Player : MonoBehaviour {
     public bool canJump = false; /*Controla si el metodo JumpCode() se ejecuta o no*/
     public bool inTutorial; /*Define las acciones que puede hacer el objeto como desplazamiento o salto*/
     public bool hasEnd;
-    public Animator timmy;
+    public bool isDead = false;
+  
 
 
     void Start()
     {
-        timmy = GameObject.FindGameObjectWithTag("Timmy").GetComponent<Animator>();
+
         /*Se inicializan las variables para impedir el desplazamiento del objeto desde el inicio*/
         stop = true;
         hasEnd = false;
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour {
         /*Igualamos la variable inicio a la posicion acutal del objeto*/
         //inicio = transform.position;
 
-        upTime = 20;
+        upTime = 15;
 
     }
 
@@ -84,14 +85,14 @@ public class Player : MonoBehaviour {
             }
 
         }
-        if (upTime == 0 && downTime < 20)
+        if (upTime == 0 && downTime < 10)
         {
-            transform.Translate(0, -10 * Time.deltaTime, 0);
+            transform.Translate(0, -15 * Time.deltaTime, 0);
             downTime++;
-            if (downTime == 20)
+            if (downTime == 10)
             {
                 canJump = false;
-                upTime = 20;
+                upTime = 15;
             }
         }
     }
@@ -99,18 +100,18 @@ public class Player : MonoBehaviour {
     /*Metodos para controlar movimiento derecha-izquierda*/
     public void MoveRight()
     {
-        if (contador < 1 && inTutorial == false)
+        if (contador < 1 && inTutorial == false && isDead == false)
         {
-            timmy.Play("Lean Right", -1, 0f);
+           
             contador++;
             gameObject.transform.Translate(0, 0, -2);
         }
     }
     public void MoveLeft()
     {
-        if (contador > -1 && inTutorial == false)
+        if (contador > -1 && inTutorial == false && isDead == false)
         {
-            timmy.Play("Lean Left", -1, 0f);
+           
             contador--;
             gameObject.transform.Translate(0, 0, 2);
         }
@@ -119,14 +120,13 @@ public class Player : MonoBehaviour {
     /*Convierte el valor del bool a verdadero*/
     public void Jump()
     {
-        canJump = true;
+        if (isDead == false)
+        {
+            canJump = true;
+        }
     }
     /*Inicia la animación de salto*/
-    public void jumpAnim()
-    {
-       
-        timmy.Play("Jump", -1, 0f);
-    }
+   
 
     /*Recarga de la escena al morir*/
 
@@ -134,7 +134,7 @@ public class Player : MonoBehaviour {
     {
         if (other.transform.tag == "Obstacle1")
         {
-
+            isDead = true;
             StartCoroutine(Die());
         }
     }
@@ -143,7 +143,6 @@ public class Player : MonoBehaviour {
     {
         stop = true;
         canJump = false;
-        timmy.Play("Death", -1, 0f);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Test Level");
 
