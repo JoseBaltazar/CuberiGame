@@ -23,7 +23,7 @@ public class EntityController : MonoBehaviour {
         stop = true;
         hasEnd = false;
 
-        upTime = 15;
+        upTime = 30;
 
     }
 
@@ -53,12 +53,12 @@ public class EntityController : MonoBehaviour {
         }
         if (upTime == 0 && downTime < 10)
         {
-            transform.Translate(0, -15 * Time.deltaTime, 0);
+            transform.Translate(0, -30 * Time.deltaTime, 0);
             downTime++;
             if (downTime == 10)
             {
                 canJump = false;
-                upTime = 15;
+                upTime = 30;
             }
         }
     }
@@ -67,7 +67,6 @@ public class EntityController : MonoBehaviour {
     {
         if (contador < 1 && inTutorial == false && isDead == false)
         {
-
             contador++;
             gameObject.transform.Translate(0, 0, -2);
         }
@@ -76,7 +75,6 @@ public class EntityController : MonoBehaviour {
     {
         if (contador > -1 && inTutorial == false && isDead == false)
         {
-
             contador--;
             gameObject.transform.Translate(0, 0, 2);
         }
