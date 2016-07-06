@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class CameraMov : MonoBehaviour {
+public class CameraController : MonoBehaviour {
 
     public GameObject objetivo;
     public Vector3 ofset;

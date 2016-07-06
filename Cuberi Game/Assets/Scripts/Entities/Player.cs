@@ -34,7 +34,7 @@ public class Player : EntityController {
         if (other.transform.tag == "Coinx5")
         {
             scoreCoins += GameObject.Find("ItemManager").GetComponent<Item>().cx5Value;
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 

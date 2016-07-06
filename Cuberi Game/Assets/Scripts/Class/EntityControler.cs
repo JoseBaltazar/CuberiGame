@@ -25,13 +25,10 @@ public class EntityController : MonoBehaviour {
         hasEnd = false;
 
         upTime = 30;
+        scoreCoins = 0;
 
     }
 
-    void Update()
-    {
-
-    }
 
     public void ObjectRun()
     {
