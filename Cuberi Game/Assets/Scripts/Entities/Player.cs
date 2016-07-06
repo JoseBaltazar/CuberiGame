@@ -30,6 +30,12 @@ public class Player : EntityController {
             isDead = true;
             StartCoroutine(Die());
         }
+
+        if (other.transform.tag == "Coinx5")
+        {
+            scoreCoins += GameObject.Find("ItemManager").GetComponent<Item>().cx5Value;
+            Destroy(other);
+        }
     }
 
     IEnumerator Die()

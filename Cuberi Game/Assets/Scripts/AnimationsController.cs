@@ -1,22 +1,13 @@
 ﻿using UnityEngine;
 
-
-
-public class playerAnimations : MonoBehaviour
+public class AnimationsController : MonoBehaviour
 {
 
     public Animator timmy;
   
-
-
-
     void Start()
     {       
         timmy = gameObject.GetComponent<Animator>();
-    }
-
-    void Update()
-    {
     }
 
     public void runAnim()
@@ -48,7 +39,7 @@ public class playerAnimations : MonoBehaviour
     {
             timmy.Play("Lean Right", -1, 0f);
     }
-    /*
+    
    public void OnTriggerEnter(Collider die)
 
     {
@@ -56,5 +47,5 @@ public class playerAnimations : MonoBehaviour
         {
             timmy.Play("Death", -1, 0f);
         }
-    }*/
+    }
 }

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 413454}
   - 33: {fileID: 3321714}
   - 23: {fileID: 2393976}
+  - 65: {fileID: 6599926}
   m_Layer: 0
   m_Name: Coinx5
   m_TagString: Coinx5
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195222}
   m_LocalRotation: {x: 0, y: 0.7071069, z: 0, w: -0.70710677}
-  m_LocalPosition: {x: 3, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -142}
   m_LocalScale: {x: 1.4999998, y: 1.5, z: 2.2649996}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,6 +63,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195222}
   m_Mesh: {fileID: 4300000, guid: 394236b70a431a84b9acf8ecda15bb1a, type: 3}
+--- !u!65 &6599926
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7425293, y: 0.7425292, z: 0.094427034}
+  m_Center: {x: 0, y: 0, z: 0.047213517}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

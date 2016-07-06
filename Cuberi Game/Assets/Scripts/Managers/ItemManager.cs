@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class ItemManager : MonoBehaviour {
+public class ItemManager : Item {
 
     public GameObject[] Coinx5, Coinx10, Coinx20;
-    public int cx5Value, cx10Value, cx20Value;
-    public float c5sRot, c10sRot, c20sRot;
+   
 
 	void Start () {
 

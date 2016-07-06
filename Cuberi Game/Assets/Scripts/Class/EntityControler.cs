@@ -14,6 +14,7 @@ public class EntityController : MonoBehaviour {
     public bool hasEnd;
     public bool stop;
 
+    public int scoreCoins;
 
     void Start()
     {
@@ -87,5 +88,7 @@ public class EntityController : MonoBehaviour {
             canJump = true;
         }
     }
+
+
 
 }

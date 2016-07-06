@@ -74,12 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActionObjects.cs" />
+    <Compile Include="Assets\Scripts\AnimationsController.cs" />
     <Compile Include="Assets\Scripts\CameraMov.cs" />
-    <Compile Include="Assets\Scripts\Class\Entity.cs" />
     <Compile Include="Assets\Scripts\Class\EntityControler.cs" />
+    <Compile Include="Assets\Scripts\Class\Item.cs" />
     <Compile Include="Assets\Scripts\CoinsUI.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
-    <Compile Include="Assets\Scripts\Entities\TimmyE1.cs" />
     <Compile Include="Assets\Scripts\GenericPhysincs.cs" />
     <Compile Include="Assets\Scripts\Managers\ButtonsMan.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
@@ -89,7 +89,6 @@
     <Compile Include="Assets\Scripts\ObstaculoMov.cs" />
     <Compile Include="Assets\Scripts\Rots.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
-    <Compile Include="Assets\Scripts\playerAnimations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
