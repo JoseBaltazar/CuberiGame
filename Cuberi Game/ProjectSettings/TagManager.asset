@@ -21,6 +21,7 @@ TagManager:
   - Level1
   - Level2
   - Timmy
+  - Tutorial
   layers:
   - Default
   - TransparentFX

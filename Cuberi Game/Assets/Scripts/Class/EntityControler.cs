@@ -29,7 +29,6 @@ public class EntityController : MonoBehaviour {
 
     }
 
-
     public void ObjectRun()
     {
         gameObject.transform.Translate(1 * Time.deltaTime * movSpeed, 0, 0);
