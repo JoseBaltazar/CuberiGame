@@ -1,11 +1,11 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{BC1806EF-58D0-3249-BBA6-0A90466EA3EF}") = "Cuberi Game", "Assembly-CSharp-firstpass.csproj", "{7BEA77F8-9674-0EBC-B14C-F94C357B686D}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuberi Game.CSharp.Plugins", "Cuberi Game.CSharp.Plugins.csproj", "{A168C8F9-08F9-E3CD-D881-DC6123F5672A}"
 EndProject
-Project("{BC1806EF-58D0-3249-BBA6-0A90466EA3EF}") = "Cuberi Game", "Assembly-CSharp.csproj", "{1CA71AD8-D395-7A10-F47D-80D03896C25F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuberi Game.CSharp", "Cuberi Game.CSharp.csproj", "{AEAA377C-9E81-480F-4926-0210456BF4B9}"
 EndProject
-Project("{BC1806EF-58D0-3249-BBA6-0A90466EA3EF}") = "Cuberi Game", "Assembly-CSharp-Editor.csproj", "{C2F2909A-043A-3DBF-85D9-930C36CF7CEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuberi Game.CSharp.Editor", "Cuberi Game.CSharp.Editor.csproj", "{16FAE607-58E5-A43D-13FC-59EBAA14C006}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,23 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BEA77F8-9674-0EBC-B14C-F94C357B686D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BEA77F8-9674-0EBC-B14C-F94C357B686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BEA77F8-9674-0EBC-B14C-F94C357B686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BEA77F8-9674-0EBC-B14C-F94C357B686D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CA71AD8-D395-7A10-F47D-80D03896C25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CA71AD8-D395-7A10-F47D-80D03896C25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CA71AD8-D395-7A10-F47D-80D03896C25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CA71AD8-D395-7A10-F47D-80D03896C25F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2F2909A-043A-3DBF-85D9-930C36CF7CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2F2909A-043A-3DBF-85D9-930C36CF7CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2F2909A-043A-3DBF-85D9-930C36CF7CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2F2909A-043A-3DBF-85D9-930C36CF7CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A168C8F9-08F9-E3CD-D881-DC6123F5672A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A168C8F9-08F9-E3CD-D881-DC6123F5672A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A168C8F9-08F9-E3CD-D881-DC6123F5672A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A168C8F9-08F9-E3CD-D881-DC6123F5672A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEAA377C-9E81-480F-4926-0210456BF4B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAA377C-9E81-480F-4926-0210456BF4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAA377C-9E81-480F-4926-0210456BF4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAA377C-9E81-480F-4926-0210456BF4B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FAE607-58E5-A43D-13FC-59EBAA14C006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FAE607-58E5-A43D-13FC-59EBAA14C006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FAE607-58E5-A43D-13FC-59EBAA14C006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FAE607-58E5-A43D-13FC-59EBAA14C006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
