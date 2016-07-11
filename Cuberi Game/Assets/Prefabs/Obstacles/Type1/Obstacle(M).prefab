@@ -11,6 +11,7 @@ GameObject:
   - 23: {fileID: 2389818}
   - 33: {fileID: 3307952}
   - 65: {fileID: 6590582}
+  - 114: {fileID: 11479400}
   m_Layer: 0
   m_Name: Obstacle(M)
   m_TagString: Obstacle1
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116760}
   m_LocalRotation: {x: -0.707106, y: 0, z: 0, w: 0.7071076}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 155, y: 2.111017, z: -2.11}
+  m_LocalScale: {x: 1, y: 1, z: 1.4038813}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,6 +76,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7780253, y: 1.778, z: 1.7780341}
   m_Center: {x: 0.000012636185, y: 0, z: 0.88898295}
+--- !u!114 &11479400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ac5b1def414ec4e86e168bf2c10e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patron: 0
+  speed: 0
+  waypoints: []
+  Esfera: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
