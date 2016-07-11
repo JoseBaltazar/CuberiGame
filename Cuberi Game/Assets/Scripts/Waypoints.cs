@@ -13,7 +13,7 @@ public class Waypoints : MonoBehaviour
 	private int currentTarget = 0;
 
 	public Transform Esfera;
-	// Use this for initialization
+
 	void Start()
 	{
 
@@ -25,7 +25,6 @@ public class Waypoints : MonoBehaviour
 
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		if (Patron)

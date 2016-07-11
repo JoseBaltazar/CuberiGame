@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Obstaculo.cs" />
     <Compile Include="Assets\Scripts\ObstaculoMov.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
+    <Compile Include="Assets\Scripts\Waypoints.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

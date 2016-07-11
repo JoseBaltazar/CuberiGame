@@ -13,11 +13,27 @@ public class EntityController : MonoBehaviour {
     public bool inTutorial;
     public bool hasEnd;
     public bool stop;
+    public bool inLevelT;
+    public bool inLevel1;
 
     public int scoreCoins;
 
+    public Vector3 inicio;
+    public GameObject spawnT;
+    public GameObject spawnL1;
+    public GameObject spawnL2;
+
     void Start()
     {
+        if (inLevelT == true)
+        {
+            GameObject.Find("Player").GetComponent<Transform>().transform.position = spawnT.transform.position;
+        }
+
+        if (inLevel1 == true)
+        {
+            GameObject.Find("Player").GetComponent<Transform>().transform.position = spawnL1.transform.position;
+        }
 
         isDead = false;
         canJump = false;

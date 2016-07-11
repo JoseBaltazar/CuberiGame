@@ -165,7 +165,7 @@ MonoBehaviour:
   level4: {fileID: 0}
   tLevel: {fileID: 0}
   tActive: 1
-  l1Active: 0
+  l1Active: 1
   l2Active: 0
   l3Active: 0
   l4Active: 0

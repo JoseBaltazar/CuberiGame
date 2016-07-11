@@ -205,7 +205,7 @@ public class ButtonsMan : MonoBehaviour {
     IEnumerator Load()
     {
         GameObject.Find("Player").GetComponent<Player>().hasEnd = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         GameObject.Find("LevelManager").GetComponent<LevelManager>().l1Active = true;
     }
 }

@@ -8,6 +8,7 @@ public class Player : EntityController {
 
     void Update()
     {
+        
 
         if (stop == false)
         {
@@ -43,8 +44,16 @@ public class Player : EntityController {
         stop = true;
         canJump = false;
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Test Level");
+        if (inLevelT==true)
+        {
+            this.gameObject.transform.position = spawnT.transform.position;
+        }
+        if (inLevel1 == true)
+        {
+            this.gameObject.transform.position = spawnL1.transform.position;
+        }
 
+        isDead = false;
     }
    
    

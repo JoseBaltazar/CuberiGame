@@ -9,6 +9,8 @@ public class ActionObjects : MonoBehaviour {
             if (this.gameObject.transform.CompareTag("InTuto"))
             {
                 GameObject.Find("Player").GetComponent<Player>().inTutorial = true;
+                GameObject.Find("Player").GetComponent<Player>().inLevelT = true;
+                GameObject.Find("Player").GetComponent<Player>().inLevel1 = false;
             }
 
             if (this.gameObject.transform.CompareTag("JumpOn"))
@@ -24,6 +26,12 @@ public class ActionObjects : MonoBehaviour {
             if (this.gameObject.transform.CompareTag("EndLevel"))
             {
                 GameObject.Find("Player").GetComponent<Player>().hasEnd = true;
+            }
+            if (this.gameObject.transform.CompareTag("StartL1"))
+            {
+                GameObject.Find("Player").GetComponent<Player>().inLevelT = false;
+                GameObject.Find("Player").GetComponent<Player>().inTutorial = false;
+                GameObject.Find("Player").GetComponent<Player>().inLevel1 = true;
             }
         }
     }
