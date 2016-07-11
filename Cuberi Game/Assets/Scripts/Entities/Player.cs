@@ -42,7 +42,7 @@ public class Player : EntityController {
     {
         stop = true;
         canJump = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.5f);
         if (inLevelT==true)
         {
             this.gameObject.transform.position = spawnT.transform.position;

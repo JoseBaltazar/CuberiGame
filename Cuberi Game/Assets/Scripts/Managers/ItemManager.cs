@@ -58,6 +58,14 @@ public class ItemManager : Item {
             {
                 objR2.gameObject.SetActive(true);
             }
+            foreach (GameObject objR3 in Rot3)
+            {
+                objR3.gameObject.SetActive(true);
+            }
+            foreach (GameObject objR4 in Rot4)
+            {
+                objR4.gameObject.SetActive(true);
+            }
         }
     }
 }

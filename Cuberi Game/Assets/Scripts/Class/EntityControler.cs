@@ -16,6 +16,8 @@ public class EntityController : MonoBehaviour {
     public bool inLevelT;
     public bool inLevel1;
     public bool inLevel2;
+    public bool inLevel3;
+    public bool inLevel4;
 
     public int scoreCoins;
 
@@ -23,6 +25,9 @@ public class EntityController : MonoBehaviour {
     public GameObject spawnT;
     public GameObject spawnL1;
     public GameObject spawnL2;
+    public GameObject spawnL3;
+    public GameObject spawnL4;
+
 
     void Start()
     {
@@ -34,6 +39,21 @@ public class EntityController : MonoBehaviour {
         if (inLevel1 == true)
         {
             GameObject.Find("Player").GetComponent<Transform>().transform.position = spawnL1.transform.position;
+        }
+
+        if (inLevel2 == true)
+        {
+            GameObject.Find("Player").GetComponent<Transform>().transform.position = spawnL2.transform.position;
+        }
+
+        if (inLevel3 == true)
+        {
+            GameObject.Find("Player").GetComponent<Transform>().transform.position = spawnL3.transform.position;
+        }
+
+        if (inLevel4 == true)
+        {
+            GameObject.Find("Player").GetComponent<Transform>().transform.position = spawnL4.transform.position;
         }
 
         isDead = false;
