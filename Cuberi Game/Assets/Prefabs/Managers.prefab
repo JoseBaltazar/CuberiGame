@@ -161,10 +161,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level1: {fileID: 0}
   level2: {fileID: 0}
+  level3: {fileID: 0}
+  level4: {fileID: 0}
   tLevel: {fileID: 0}
   tActive: 1
-  l1Active: 1
-  l2Active: 1
+  l1Active: 0
+  l2Active: 0
+  l3Active: 0
+  l4Active: 0
 --- !u!114 &11406472
 MonoBehaviour:
   m_ObjectHideFlags: 1

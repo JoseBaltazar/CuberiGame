@@ -22,6 +22,8 @@ TagManager:
   - Level2
   - Timmy
   - Tutorial
+  - Level3
+  - Level4
   layers:
   - Default
   - TransparentFX
