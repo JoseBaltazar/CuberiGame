@@ -166,7 +166,7 @@ MonoBehaviour:
   tLevel: {fileID: 0}
   tActive: 1
   l1Active: 1
-  l2Active: 0
+  l2Active: 1
   l3Active: 0
   l4Active: 0
 --- !u!114 &11406472
@@ -200,6 +200,11 @@ MonoBehaviour:
   Coinx5: []
   Coinx10: []
   Coinx20: []
+  Rot0: []
+  Rot1: []
+  Rot2: []
+  Rot3: []
+  Rot4: []
 --- !u!114 &11412062
 MonoBehaviour:
   m_ObjectHideFlags: 1

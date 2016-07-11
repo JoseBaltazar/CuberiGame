@@ -1423,8 +1423,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0.3, z: 0.1}
+  m_Size: {x: 0.3641005, y: 0.5, z: 0.5}
+  m_Center: {x: 0.0012356116, y: 0.29999995, z: 0.09999999}
 --- !u!95 &9514384
 Animator:
   serializedVersion: 3
@@ -1553,11 +1553,16 @@ MonoBehaviour:
   stop: 0
   inLevelT: 0
   inLevel1: 0
+  inLevel2: 1
+  inLevel3: 0
+  inLevel4: 0
   scoreCoins: 0
   inicio: {x: 0, y: 0, z: 0}
   spawnT: {fileID: 0}
   spawnL1: {fileID: 0}
   spawnL2: {fileID: 0}
+  spawnL3: {fileID: 0}
+  spawnL4: {fileID: 0}
 --- !u!137 &13795430
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

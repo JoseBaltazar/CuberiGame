@@ -54,6 +54,16 @@ public class Player : EntityController {
             this.gameObject.transform.position = spawnL1.transform.position;
             this.gameObject.transform.rotation = spawnL1.transform.rotation;
         }
+        if (inLevel2 == true)
+        {
+            this.gameObject.transform.position = spawnL2.transform.position;
+            this.gameObject.transform.rotation = spawnL2.transform.rotation;
+        }
+        if (inLevel3 == true)
+        {
+            this.gameObject.transform.position = spawnL3.transform.position;
+            this.gameObject.transform.rotation = spawnL3.transform.rotation;
+        }
 
         isDead = false;
         upTime = 30;
