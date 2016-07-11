@@ -15,6 +15,7 @@ public class EntityController : MonoBehaviour {
     public bool stop;
     public bool inLevelT;
     public bool inLevel1;
+    public bool inLevel2;
 
     public int scoreCoins;
 

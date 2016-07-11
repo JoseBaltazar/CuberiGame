@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 
@@ -47,13 +46,19 @@ public class Player : EntityController {
         if (inLevelT==true)
         {
             this.gameObject.transform.position = spawnT.transform.position;
+            this.gameObject.transform.rotation = spawnT.transform.rotation;
+
         }
         if (inLevel1 == true)
         {
             this.gameObject.transform.position = spawnL1.transform.position;
+            this.gameObject.transform.rotation = spawnL1.transform.rotation;
         }
 
         isDead = false;
+        upTime = 30;
+        downTime = 0;
+        contador = 0;
     }
    
    
